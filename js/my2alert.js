@@ -16,7 +16,7 @@ var curlvl;
 var startlvl = 0;
 var prevlvl = startlvl;
 var lst = $("#toc");
-var tmp2 = $("<p class='r'><a class='inl' href='javascript:void(0)' title='Закрыть меню' onclick='closeNav()'> ✖ </a></p><p class='c'><a class='inl' href='u00.html' title='all units of book'> ⇚ </a> <a class='inl' href='#top' title='top of page'> ⇑ </a> <a class='inl' href='javascript:void(0)' title='pronunciation' onclick=\"toggleShow('.zxx')\">[ ]</a> <a class='inl' href='javascript:void(0)' title='subject + predicate' onclick=\"toggleShow2('dd')\"> ≡ </a><hr class='h' />");
+var tmp2 = $("<p class='r'><a class='inl' href='javascript:void(0)' title='close' onclick='closeNav()'> ✖ </a></p><p class='c'><a class='inl' href='u00.html' title='all units of book'> ⇚ </a> <a class='inl' href='#top' title='top of page'> ⇑ </a> <a class='inl' href='javascript:void(0)' title='pronunciation' onclick=\"toggleShow('.zxx')\">[ ]</a> <a class='inl' href='javascript:void(0)' title='subject + predicate' onclick=\"toggleShow2('dd')\"> ≡ </a><hr class='h' />");
 lst.append(tmp2);
 var href1 = window.location.href;
 var href2 = href1.replace(window.location.hash, "");
