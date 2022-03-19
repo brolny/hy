@@ -220,6 +220,9 @@ border-top:0;
 margin-top:0;
 padding-top:0}
 
+p.u{
+text-indent:0;
+}
 p.z:before{content:"● ";text-decoration:none!important;}
 p.z:after,p.u:after{content:":"}
 p.uu:after{content:" ՝"}
@@ -345,7 +348,7 @@ grid-template-columns: repeat(3, minmax(max-content, max-content))}
 
 div.j > p{text-indent:0}
 div.jj > p{
-text-indent:0;
+text-indent:1em;
 margin-right:var(--f-s-q);}
 
 div.jjj > p{
