@@ -1,3 +1,23 @@
+$(function(){
+$(document.body).bind('mouseup', function(e){
+	var selection;
+
+	if (window.getSelection) {
+		selection = window.getSelection();
+	} else if (document.selection) {
+		selection = document.selection.createRange();
+	}
+	a = selection.toString().split('\n').join(' ').split(' ')[0];;
+	if (a !== '')
+		{
+			a = a.replace(/[^a-zա-ևа-я -]/gi, ' ').split(' ').join('');
+						
+			if (confirm('Find in Wiktionary?\n' + a)) 
+				window.open('https://wiktionary.org/wiki/' + a, '_blank'); 
+		}
+	});
+});
+
 /* menu */
 $(document).ready(
 function(){
