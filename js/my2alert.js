@@ -11,9 +11,11 @@ $(document.body).bind('mouseup', function(e){
 	if (a !== '')
 		{
 			a = a.replace(/[^a-zա-ևа-я -]/gi, ' ').split(' ').join('');
-						
-			if (confirm('Find in Wiktionary?\n' + a)) 
-				window.open('https://wiktionary.org/wiki/' + a, '_blank'); 
+			if (a !== '')			
+			{
+				if (confirm('Find in Wiktionary?\n' + a)) 
+				window.open('https://wiktionary.org/wiki/' + a, '_blank');
+			}
 		}
 	});
 });
