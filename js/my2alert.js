@@ -10,7 +10,7 @@ $(document.body).bind('mouseup', function(e){
 	a = selection.toString().split('\n').join(' ').split(' ')[0];;
 	if (a !== '')
 		{
-			a = a.replace(/[^a-zա-ևа-я -]/gi, ' ').split(' ').join('');
+			a = a.replace(/[^ա-և -]/gi, ' ').split(' ').join('');
 			if (a !== '')			
 			{
 				if (confirm('Find in Wiktionary?\n' + a)) 
