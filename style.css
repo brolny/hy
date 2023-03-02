@@ -1,10 +1,10 @@
 @media screen and (min-width:500px){body {width:500px}}
 @keyframes fadeDown{0%{opacity:.3} 100%{opacity:.9}}
 :root{
---f-s:20px;
---f-sd:-20px;
---f-s-h:25px;
---f-s-b:30px;
+--f-s:18px;
+--f-sd:-18px;
+--f-s-h:24px;
+--f-s-b:26px;
 --f-s-2:40px;
 --f-s-m:10px;
 --f-s-q:5px}
@@ -33,7 +33,7 @@ hyphens:auto;
 b {font-weight:600}
 em {font-weight:500}
 /* lang */
-[lang="ru"]{color:DarkSlateGray}
+[lang="ru"]{color:black}
 [lang="la"]{color:DimGray}
 [lang="en"]{color:black}
 [lang="fr"]{color:darkviolet}
