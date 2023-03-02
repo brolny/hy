@@ -22,7 +22,7 @@ background-color:white;
 padding:var(--f-s);
 margin:auto;
 font-size:var(--f-s);
-text-indent:var(--f-s);
+text-indent:var(--f-s-m);
 font-family:"Segoe UI Historic","Segoe UI",Helvetica,Arial,sans-serif;
 hyphens:auto;
 -webkit-hyphens:auto;
