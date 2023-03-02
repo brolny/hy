@@ -57,8 +57,8 @@ span.d{text-decoration:double underline DarkSlateGray;
 text-decoration-thickness:1px;text-decoration-skip:ink}
 
 [lang="zxx"]{color:DarkCyan;white-space:nowrap;font-size:var(--f-s);display:inline}
-[lang="zxx"]:before{content:"［"}
-[lang="zxx"]:after{content:"］"}
+[lang="zxx"]:before{content:"["}
+[lang="zxx"]:after{content:"]"}
 .zxx {color:DarkCyan;white-space:nowrap;font-size:var(--f-s)}
 /**************************/
 
