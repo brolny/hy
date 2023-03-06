@@ -12,6 +12,13 @@ html{-webkit-text-size-adjust:100%;
 scroll-behavior:smooth;
 text-size-adjust:100%;}
 
+.ogg {
+position: sticky;
+top: 0;
+min-height: 2em;
+width:100%;
+}
+
 body{
 letter-spacing:-1px;
 font-weight:300;
