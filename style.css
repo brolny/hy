@@ -67,7 +67,7 @@ text-decoration-thickness:1px;text-decoration-skip:ink}
 [lang="zxx"]{color:DarkCyan;white-space:nowrap;font-size:var(--f-s);display:inline}
 [lang="zxx"]:before{content:"［"}
 [lang="zxx"]:after{content:"］"} 
-.zxx {color:DarkCyan;white-space:nowrap;font-size:var(--f-s)}
+.zxx {color:DarkCyan;white-space:nowrap;font-size:var(--f-s);margin-left:-0.6em;}
 /**************************/
 
 dt {margin-top:var(--f-s)}
