@@ -281,7 +281,22 @@ function openNav(){document.getElementById("toc").style.width="360px"}
 function closeNav(){document.getElementById("toc").style.width="0"}
 /**************************/
 
-
+function arrow() {
+var url = window.location.pathname;
+var fn = Number(url.substring(url.lastIndexOf('/')+1).replace('u', '').replace('.html', '') );
+var fn1 = fn-1;
+var fn2 = fn+1;
+if (fn1 < 10) {
+	navFile = '<a href="..\/ogg\/u0'+fn1+'.html" title="Previous page">&emsp;⇚&emsp;<\/a>&emsp;'
+	} else {
+	navFile = '<a href="..\/ogg\/u'+fn1+'.html" title="Previous page">&emsp;⇚&emsp;<\/a>&emsp;'
+	};
+if (fn != 108) {
+		navFile=navFile+'&emsp;<a href="..\/ogg\/u'+fn2+'.html" title="Next page">&emsp;⇛&emsp;<\/a>'
+	};
+navFile = '<hr \/><p class="c">' + navFile + '<\/p><hr \/>';
+document.getElementById("id02").innerHTML=navFile;
+}
 
 
 
