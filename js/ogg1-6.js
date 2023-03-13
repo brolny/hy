@@ -1,4 +1,4 @@
-var uu=[
+var u=[
 ['ես նույնպես լավ եմ','I am fine too','jɛs ˈnujnpɛs lɑv ɛm'],
 ['հոգնած եմ','I am tired','ɑˈjɔ hɔkʰˈnɑt͡s ɛm'],
 ['շատ անելիքներ ունեմ','I have a lot to do','ʃɑt ɑnɛˈlikʰnɛɾ uˈnɛm'],
