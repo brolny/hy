@@ -108,7 +108,7 @@ var u=[
 ['ուսուցիչ','teacher','usuˈt͡sʰit͡ʃʰ'],
 ['ուսուցչուհի','female teacher','usut͡sʰt͡ʃʰuˈhi'],
 ['ուտել','to eat','uˈtɛl'],
-['ուտելուց առաջ','before eating','utɛlˈit͡sʰ ɑ'rɑt͡ʃ'],
+['ուտելուց առաջ','before eating','utɛlˈit͡sʰ ɑˈrɑt͡ʃ'],
 ['սիրուն աղջիկ','pretty girl','siˈɾun ɑχˈt͡ʃʰik'],
 ['ստիպված ենք','we forced to','stipˈvɑt͡sʰ ɛŋkʰ'],
 ['ստիպվել','to be forced to','stipˈvɛl'],
