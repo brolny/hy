@@ -6,7 +6,7 @@ var u=[
 ['ազգ','nation','ɑzɡ'],
 ['ազգություն','nationality','ɑzɡuˈʦʰjun'],
 ['ապրիլին','in April','ɑpɾiˈlin'],
-['ապրիլն','April','ɑpˈɾil'],
+['ապրիլ','April','ɑpˈɾil'],
 ['դու','you','du'],
 ['ես ծնվել եմ','I was born','jɛs ʦənˈvɛl ‿ ɛm'],
 ['երբ','when','jɛɾpʰ'],
