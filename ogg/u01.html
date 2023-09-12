@@ -26,19 +26,19 @@
 <p lang="en" class="c">Greeting & Farewell</p>
 <p lang="hy" class="c">Ողջույն և Հրաժեշտ</p>
 <p class="b c"><span class="zxx" lang="zxx">vɔχˈʧʰujn&emsp;jɛv&emsp;həɾɑˈʒɛʃt</span></p>
-<audio controls autoplay class="ogg" id="my_ogg">
+<audio controls class="ogg" id="my_ogg">
 <source src="01.ogg" type="audio/ogg">
 <source src="https://brolny.github.io/hy/ogg/01.ogg" type="audio/ogg">
 <p lang="en">Your browser does not support the audio tag for ogg.</p>
 </audio>
-<script>let a=document.getElementById("my_ogg");a.currentTime=10;</script>
+<script>let a=document.getElementById("my_ogg");a.currentTime=10;$(document).ready(function () {$('html, body').animate({scrollTop: $('#my_ogg').offset().top},600);});</script>
 <p lang="hy" class="c">Զրույց առաջին</p>
 <p class="b c"><span class="zxx" lang="zxx">zəˈɾujʦʰ&emsp;ɑrɑˈʧʰin</span></p>
 <p lang="hy">– Ողջո՜ւյն։</p>
 <p class="b"><span class="zxx" lang="zxx">vɔχˈʧʰujn</span></p>
 <p lang="hy">– Բարև՛։</p>
 <p class="b"><span class="zxx" lang="zxx">bɑˈɾɛv</span></p>
-<p lang="hy">– Ո՞նց ես։</p>
+<p lang="hy">– <span class="i">Ո՞նց ես</span>։</p>
 <p class="b"><span class="zxx" lang="zxx">ˈvɔnʦʰ ‿ ɛs</span></p>
 <p lang="hy">– Գերազանց։</p>
 <p><span class="zxx" lang="zxx">ɡɛɾɑˈzɑnʦʰ</span></p>
@@ -48,10 +48,14 @@
 <p class="b"><span class="zxx" lang="zxx">lɑv</span></p>
 <p lang="hy">– <span class="i">Ուրախ եմ</span> լսել։</p>
 <p class="b"><span class="zxx" lang="zxx">uˈɾɑχ ‿ ɛm&emsp;ləˈsɛl</span></p>
-<p lang="hy">– Կտեսնվենք։</p>
+<p lang="hy">– <span class="d">Կտեսնվենք</span>։</p>
 <p class="b"><span class="zxx" lang="zxx">kətɛsnˈvɛnkʰ</span></p>
 <p lang="hy">– Առայժմ։</p>
 <p><span class="zxx" lang="zxx">ɑˈrɑjʒəm</span></p>
-</div>
+
+<h2><span lang="en">Quiz</span></h2></div>
+<p class="c"><button title="Hy-En" onclick="tt()"><span lang="en">Hy</span></button><button title="En-Hy" onclick="tttt()"><span lang="en">En</span></button></p>
+<div id="id01" lang="en"><p></p></div>
+<script src="../js/ogg01.js"></script>
 <div id="id02" lang="en"></div>
 </body></html>
