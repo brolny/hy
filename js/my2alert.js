@@ -163,7 +163,7 @@ if(ernu==0){
 		yy=yy+"<p><span lang='hy'>"+k[0]+"<\/span>"+k[1]+"<\/p>";
 		vv=vv+"<p>"+k[1]+" – <span lang='hy' class='n'>"+k[0]+"<\/span><\/p>";};
 	if(yy!=''){
-		yy="<h4><span lang='ru'>Ошибки</span> \/ <span lang='en'>Errors<\/span><\/h4><p class='z'><span lang='en'>HY<\/span><\/p>"+yy+"<\/p><hr \/>"+vv;};
+		yy="<h4><span lang='ru'>Ошибки</span><br><span lang='en'>Errors<\/span><br><span lang='hy'>Սխալներ<\/span><\/h4><p class='z'><span lang='en'>HY<\/span><\/p>"+yy+"<\/p><hr \/>"+vv;};
 	document.getElementById("id01").innerHTML=yy;
 	document.body.scrollIntoView(false);}
 };
