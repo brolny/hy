@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html><html lang="ru" xml:lang="ru">
+<!DOCTYPE html><html lang="ru" xml:lang="ru">
 <head>
 <meta charset="UTF-8">
 <title>HY lessons | 04</title>
@@ -27,12 +27,12 @@
 <p lang="en" class="c">Greeting & Farewell</p>
 <p lang="hy" class="c">Ողջույն և Հրաժեշտ</p>
 <p class="b c"><span class="zxx" lang="zxx">vɔχˈʧʰujn&emsp;jɛv&emsp;həɾɑˈʒɛʃt</span></p>
-<audio controls autoplay class="ogg" id="my_ogg">
+<audio controls class="ogg" id="my_ogg">
 <source src="04.ogg" type="audio/ogg">
 <source src="https://brolny.github.io/hy/ogg/04.ogg" type="audio/ogg">
 <p lang="en">Your browser does not support the audio tag for ogg.</p>
 </audio>
-<script>let a=document.getElementById("my_ogg");a.currentTime=10;</script>
+<script>let a=document.getElementById("my_ogg");a.currentTime=10;$(document).ready(function () {$('html, body').animate({scrollTop: $('#my_ogg').offset().top},600);});</script>
 <p lang="hy" class="c">Զրույց չորս</p>
 <p class="b c"><span class="zxx" lang="zxx">zəˈɾujʦʰ&emsp;ʧʰɔɾs</span></p>
 <p lang="hy">– Բարի օր։</p>
@@ -50,13 +50,16 @@
 <p lang="hy">– Իհարկե։</p>
 <p><span class="zxx" lang="zxx">iˈhɑɾkɛ</span></p>
 <p lang="hy">Ի՞նչ <span class="d">կուտես</span>։</p>
-<p class="b"><span class="zxx" lang="zxx">inʧʰ&emsp;kutɛs</span></p>
+<p class="b"><span class="zxx" lang="zxx">inʧʰ&emsp;kuˈtɛs</span></p>
 <p lang="hy">– Բուտերբրոդ և մի գավաթ սուրճ։</p>
 <p><span class="zxx" lang="zxx">buterbrot&emsp;jɛv&emsp;mi&emsp;ɡɑˈvɑtʰ&emsp;suɾʧ</span></p>
 <p lang="hy">Իսկ դո՞ւ։</p>
 <p class="b"><span class="zxx" lang="zxx">isk&emsp;du</span></p>
 <p lang="hy">– Խմորեղեն և մի բաժակ հյութ։</p>
 <p class="b"><span class="zxx" lang="zxx">χəˈmɔɾɛʁɛn&emsp;jɛv&emsp;mi&emsp;bɑˈʒɑk&emsp;hjutʰ</span></p>
-</div>
+<h2><span lang="en">Quiz</span></h2></div>
+<p class="c"><button title="Hy-En" onclick="tt()"><span lang="en">Hy</span></button><button title="En-Hy" onclick="tttt()"><span lang="en">En</span></button></p>
+<div id="id01" lang="en"><p></p></div>
+<script src="../js/ogg04.js"></script>
 <div id="id02" lang="en"></div>
 </body></html>
