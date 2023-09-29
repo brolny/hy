@@ -1,25 +1,27 @@
+function getSelectedText() {
+	txt ='';
+    if (window.getSelection) {
+        txt = window.getSelection();
+    } else if (window.document.getSelection) {
+        txt =window.document.getSelection();
+    } else if (window.document.selection) {
+        txt = window.document.selection.createRange().text;
+    }
+    return txt;
+}
+
 $(function(){
 $(document.body).bind('mouseup', function(e){
-	var selection;
-
-	if (window.getSelection) {
-		selection = window.getSelection();
-	} else if (document.selection) {
-		selection = document.selection.createRange();
-	}
-	a = selection.toString().split('\n').join(' ').split(' ')[0];;
+	a = getSelectedText();
+	a = a.toString().split('\n').join(' ').split(' ')[0];
 	if (a !== '')
 		{
-			a = a.replace(/[^ա-և -]/gi, ' ').split(' ').join('').toLowerCase();
-			if (a !== '')			
-			{
-				if (confirm('Find in Wiktionary?\n' + a)) 
+			a = a.replace(/[^ա-և -]/gi, '').split(' ').join('').toLowerCase();
+			if (a !== '')
 				window.open('https://wiktionary.org/wiki/' + a, '_blank');
-			}
 		}
 	});
 });
-
 /* menu */
 $(document).ready(
 function(){
@@ -38,7 +40,7 @@ var curlvl;
 var startlvl = 0;
 var prevlvl = startlvl;
 var lst = $("#toc");
-var tmp2 = $("<p class='r'><a class='inl' href='javascript:void(0)' title='close' onclick='closeNav()'> ✖ </a></p><p class='c'><a class='inl' href='u00.html' title='all units of book'> ⇚ </a> <a class='inl' href='#top' title='top of page'> ⇑ </a> <a class='inl' href='javascript:void(0)' title='pronunciation' onclick=\"toggleShow('.zxx')\">[ ]</a> <a class='inl' href='javascript:void(0)' title='subject + predicate' onclick=\"toggleShow2('dd')\"> ≡ </a><hr class='h' />");
+var tmp2 = $("<p class='r'><a class='inl' href='javascript:void(0)' title='Закрыть меню' onclick='closeNav()'> ✖ </a></p><p class='c'><a class='inl' href='u00.html' title='all units of book'> ⇚ </a> <a class='inl' href='#top' title='top of page'> ⇑ </a> <a class='inl' href='javascript:void(0)' title='pronunciation' onclick=\"toggleShow('.zxx')\">[ ]</a> <a class='inl' href='javascript:void(0)' title='subject + predicate' onclick=\"toggleShow2('dd')\"> ≡ </a><hr class='h' />");
 lst.append(tmp2);
 var href1 = window.location.href;
 var href2 = href1.replace(window.location.hash, "");
@@ -56,7 +58,6 @@ else{
 var last_li = $("#toc li")
 .last();
 last_li.append(tmp);
-
 }
 if (curlvl > prevlvl + 1)
 tmp.append("<li></li>");
@@ -68,7 +69,6 @@ lst = lst.parent()
 prevlvl--;
 }
 curder = current.html();
-
 if (curder.charAt(curder.length - 1) == ':'){
 curder = curder.substr(0, curder.length - 1);
 }
@@ -79,11 +79,9 @@ curder = curder.substr(0, curder.indexOf('@@@'));
 }
 lst.append("<li><a id='link" + i + "' itemprop='url' href='" + href2 + "#title" + i + "'>" + curder.trim() + "</a></li>");
 });
-};
+}
 });
 });
-
-
 /* underline on/of */
 toggleShow2=function(sel){
 var i,x=getElements(".m"),l=x.length;
@@ -93,7 +91,6 @@ for (i=0;i<l;i++){
 	}else{
 		styleElement(x[i],"text-decoration","none");
 	}}
-
 var y,xx=getElements(".i"),ll=xx.length;
 for (y=0;y<ll;y++){
 	if (xx[y].style["text-decoration"]=="none"){
@@ -101,7 +98,6 @@ for (y=0;y<ll;y++){
 	}else{
 		styleElement(xx[y],"text-decoration","none");
 	}}
-
 var o,xxx=getElements(".d"),lll=xxx.length;
 for (o=0;o<lll;o++){
 	if (xxx[o].style["text-decoration"]=="none"){
@@ -110,8 +106,6 @@ for (o=0;o<lll;o++){
 		styleElement(xxx[o],"text-decoration","none");
 	}}
 };
-
-
 /* pronunciation on/of */
 toggleShow=function(sel){
 var i,x=getElements(sel),l=x.length;
@@ -131,7 +125,6 @@ if (typeof id=="object"){
 styleElement=function(element,prop,val){
 element.style.setProperty(prop,val);};
 /***************************/
-
 /* small quize */
 Array.prototype.shuffle=function(){
 var i=this.length,j,t;
@@ -141,18 +134,16 @@ while(i){
 	this[i]=this[j];
 	this[j]=t;}
 return this;};
-
 function unique(a){
 var obj={};
 for (var i=0;i<a.length;i++){
 	var str=a[i];
 	obj[str]=true;}
-return Object.keys(obj);};
-
+return Object.keys(obj)}
 function z(a){
 if(document.getElementById(a)!==null){
 	document.getElementById(a).parentNode.removeChild(document.getElementById(a));
-	ernu=ernu-1;};
+	ernu=ernu-1}
 if(ernu==0){
 	var yy='';
 	var vv=''
@@ -163,13 +154,11 @@ if(ernu==0){
 		yy=yy+"<p><span lang='hy'>"+k[0]+"<\/span>"+k[1]+"<\/p>";
 		vv=vv+"<p>"+k[1]+" – <span lang='hy' class='n'>"+k[0]+"<\/span><\/p>";};
 	if(yy!=''){
-		yy="<h4><span lang='ru'>Ошибки</span><br><span lang='en'>Errors<\/span><br><span lang='hy'>Սխալներ<\/span><\/h4><p class='z'><span lang='en'>HY<\/span><\/p>"+yy+"<\/p><hr \/>"+vv;};
+		yy="<h4><span lang='ru'>Ошибки</span><br><span lang='en'>Errors<\/span><br><span lang='hy' class='n'>Սխալներ<\/span><\/h4><p class='z'><span lang='en'>HY<\/span><\/p>"+yy+"<\/p><hr \/>"+vv;};
 	document.getElementById("id01").innerHTML=yy;
 	document.body.scrollIntoView(false);}
 };
-
 function ran(max){return Math.floor(Math.random()*max);};
-
 function MakeList(arr,aLL,ii,ital,ord){
 b2="<\/button>";
 if (ital !=""){
@@ -194,7 +183,6 @@ var b=["<button onclick='z(\""+arr[ii][ord]+"\")'>"+i1+ arr[ii][ord].split('*').
 b.shuffle();
 b=unique(b);
 return b;};
-
 var erro=[];
 var ernu=0;
 function g(evt,a,aa){
@@ -202,7 +190,6 @@ erro.push(a);
 erro.push(aa);
 document.getElementById(evt).style.backgroundColor="#ffd1dc";
 };
-
 function tt(){
 if (typeof u=='undefined'){
 	alert("Quiz not possible.");
@@ -257,7 +244,6 @@ for (var i=1;i<aL;i++){
 	s+="<div class='sh' id='"+uu[i][1]+"'><p><span lang='hy' class='n'>"+uu[i][0].split('*').join('')+"<\/span><p\/><p class='bu'>"+ss+"<\/p><\/div>";};
 document.getElementById("id01").innerHTML=s;
 document.body.scrollIntoView(false);};
-
 function dddd(){
 if (typeof uu=='undefined'){
 	alert("Quiz not possible.");
@@ -275,7 +261,6 @@ for (var i=1;i<aL;i++){
 	s+="<div class='sh' id='"+uu[i][0]+"'><p>"+uu[i][1].split('*').join('')+"<p\/><p class='bu'>"+ss+"<\/p><\/div>";};
 document.getElementById("id01").innerHTML=s;
 document.body.scrollIntoView(false);};
-
 /* nav menu on/off*/
 function openNav(){document.getElementById("toc").style.width="360px"}
 function closeNav(){document.getElementById("toc").style.width="0"}
