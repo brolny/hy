@@ -1,27 +1,53 @@
 function getSelectedText() {
-	txt ='';
+    var txt = '';
     if (window.getSelection) {
         txt = window.getSelection();
     } else if (window.document.getSelection) {
-        txt =window.document.getSelection();
+        txt = window.document.getSelection();
     } else if (window.document.selection) {
         txt = window.document.selection.createRange().text;
     }
     return txt;
 }
 
-$(function(){
-$(document.body).bind('mouseup', function(e){
-	a = getSelectedText();
-	a = a.toString().split('\n').join(' ').split(' ')[0];
-	if (a !== '')
-		{
-			a = a.replace(/[^ա-և -]/gi, '').split(' ').join('').toLowerCase();
-			if (a !== '')
-				window.open('https://wiktionary.org/wiki/' + a, '_blank');
-		}
-	});
+/* open wiki */
+$(function () {
+    $(document.body).bind('mouseup', function () {
+        var a = getSelectedText();
+        a = a.toString().split('\n').join(' ').split(' ')[0];
+        if (a !== '') {
+            a = a.replace(/[^ա-և -]/gi, '').split(' ').join('').toLowerCase();
+            if (a !== '') {
+                window.open('https://wiktionary.org/wiki/' + a, '_blank');
+            }
+        }
+    });
 });
+
+/* to next and prev page links and set audio */
+function arrow() {
+    var url = window.location.pathname,
+        fn = Number(url.substring(url.lastIndexOf('/') + 1).replace('u', '').replace('.html', '')),
+        fn1 = fn - 1,
+        st1 = fn1.toString().padStart(2, '0'),
+        fn2 = fn + 1,
+        st2 = fn2.toString().padStart(2, '0'),
+        navFile = '<a href="..\/ogg\/u' + st1 + '.html" title="Previous page">&emsp;⇚&emsp;<\/a>&emsp;';
+    if (fn !== 108) {
+        navFile = navFile + '&emsp;<a href="..\/ogg\/u' + st2 + '.html" title="Next page">&emsp;⇛&emsp;<\/a>';
+    }
+    navFile = '<hr \/><p class="c">' + navFile + '<\/p><hr \/>';
+    document.getElementById("id02").innerHTML = navFile;
+	
+/* to audio control */
+    document.getElementById("my_ogg").currentTime = 10;
+    $(document).ready(function () {
+        $('html, body').animate({
+            scrollTop: $('#my_ogg').offset().top
+        }, 600);
+    });
+}
+
 /* menu */
 $(document).ready(
 function(){
@@ -264,18 +290,6 @@ document.body.scrollIntoView(false);};
 /* nav menu on/off*/
 function openNav(){document.getElementById("toc").style.width="360px"}
 function closeNav(){document.getElementById("toc").style.width="0"}
-/**************************/
-function arrow() {
-var url = window.location.pathname;
-var fn = Number(url.substring(url.lastIndexOf('/')+1).replace('u', '').replace('.html', '') );
-var fn1 = fn-1;
-var fn2 = fn+1;
-var st1 = fn1.toString().padStart(2,'0');
-var st2 = fn2.toString().padStart(2,'0');
-navFile = '<a href="..\/ogg\/u'+ st1+'.html" title="Previous page">&emsp;⇚&emsp;<\/a>&emsp;'
-if (fn != 108) {
-		navFile=navFile+'&emsp;<a href="..\/ogg\/u'+st2+'.html" title="Next page">&emsp;⇛&emsp;<\/a>'
-	};
-navFile = '<hr \/><p class="c">' + navFile + '<\/p><hr \/>';
-document.getElementById("id02").innerHTML=navFile;
-}
+
+
+
