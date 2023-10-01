@@ -9,14 +9,6 @@
 <meta property="og:image" content="img/android-icon-512x512.png">
 <link rel="shortcut icon" href="img/android-icon-48x48.png">
 <link rel="manifest" href="manifest.json">
-<!--  <script>  
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js')
-      .then(() => navigator.serviceWorker.ready.then((worker) => {
-        worker.sync.register('syncdata');
-      }))
-      .catch((err) => console.log(err));} 
-</script>  /-->
 <meta property="place:location:latitude" content="40.173258">
 <meta property="place:location:longitude" content="44.567708">
 <meta property="business:contact_data:street_address" content="Vilnjusi">
@@ -27,12 +19,9 @@
 <meta property="Description" content="Armenian lessons">
 <meta property="image" content="img/mainpic.jpg">
 <link rel="preload" href="style.css" as="style">
-<link rel="preload" href="tooltip.css" as="style">
 <link rel="preload" href="js/jquery-2.2.4.min.js" as="script">
-<link rel="preload" href="js/tooltip.js" as="script">
 <link rel="preload" href="js/hyph3.js" as="script">
 <link href="style.css" rel="stylesheet" type="text/css" media="all">
-<link href="tooltip.css" rel="stylesheet" type="text/css" media="all">
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
@@ -57,31 +46,30 @@
 <script src="js/my2alert.js"></script>
 </head>
 <body class="hyphenate" onLoad="Hyphenator.run()">
-<div class="text_read">
-<h1 id="top"><span lang="en">Learning Armenian</span><br />Изучение Армянского Языка</h1>
+<h1 id="top">Изучение Армянского Языка<br><span lang="en">Learning Armenian</span><br><span lang="hy" class="n">Սովորել Հայերեն</span></h1>
 <h2><span lang="en">Info</span></h2>
-<hr />
-<p>Алфавит <span lang="en"><a href="tests/abc.html" title="ABC">ABC</a></span></p>
-<p>Пунктуация <span lang="en"><a href="tests/punctuation.html" title="Punctuation">Punctuation</a></span></p>
-<p>Лексика <span lang="en"><a href="tests/u00.html" title="Punctuation">Lexicon</a></span></p>
+<hr>
+<div class="jj">
+<p>Алфавит</p><p lang="hy">Այբուբեն</p><p lang="en"><a href="tests/abc.html" title="ABC">ABC</a></p>
+<p>Пунктуация</p><p lang="hy">Կետադրություն</p><p lang="en"><a href="tests/punctuation.html" title="Punctuation">Punctuation</a></p>
+<p>Лексика</p><p lang="hy">Բառապաշար</p><p lang="en"><a href="tests/u00.html" title="Punctuation">Vocabulary</a></p>
+</div>
 <h2><span lang="en">Audio</span></h2>
-<p class="z" lang="ru">Арцун Акопян<br /><span lang="en">108 Short Dialogues</span></p>
-<p class="c"><a href="ogg/u00.html">9 units</a></p>
-<h2>Учебники / <span lang="en">Books</span></h2>
-<p class="z" lang="en">Dora Sakayan<br />"Eastern Armenian. For the English-speaking World. A Contrastive Approach"<br />Yerevan 2007</p>
-<p class="c"><a href="sak/u00.html">12 units</a></p>
-<p class="z">Сусанна Тиоян, Олег Григорян, Роберт Урутян<br />"Армянский Язык. Самоучитель"<br />Ереван 2007</p>
-<p class="c"><a href="tio/u00.html">50 уроков</a></p>
-<p class="z">Парнасян Н.А, Манукян Ж.К.<br />"Самоучитель армянского языка"<br />Ереван 2004</p>
-<p class="c"><a href="parn/u00.html">15 уроков</a></p>
-<p class="z">Максудян Л., Киракосян М.<br />"Самоучитель армянского языка"<br />Ереван 2005</p>
-<p class="c"><a href="maks/u00.html">10 уроков</a></p>
-<p class="z">Дж. А. Гарибян<br />"Учим армянский самостоятельно"<br />Москва 2017</p>
-<p class="c"><a href="gar/u00.html">12 уроков</a></p>
+<p class="z" lang="ru">Арцун Акопян<br><span lang="en">«Armenian in Short Dialogues»</span></p>
+<p class="c" lang="en"><a href="ogg/u00.html">9 units</a></p>
+<h2><span lang="en">Books</span></h2>
+<p class="z" lang="en">Dora Sakayan<br>«Eastern Armenian. For the English-speaking World. A Contrastive Approach»<br>Yerevan 2007</p>
+<p class="c" lang="en"><a href="sak/u00.html">12 units</a></p>
+<p class="z">Сусанна Тиоян, Олег Григорян, Роберт Урутян<br>«Армянский Язык. Самоучитель»<br>Ереван 2007</p>
+<p class="c" lang="en"><a href="tio/u00.html">50 units</a></p>
+<p class="z">Парнасян Н.А, Манукян Ж.К.<br>«Самоучитель армянского языка»<br>Ереван 2004</p>
+<p class="c" lang="en"><a href="parn/u00.html">15 units</a></p>
+<p class="z">Максудян Л., Киракосян М.<br>«Самоучитель армянского языка»<br>Ереван 2005</p>
+<p class="c" lang="en"><a href="maks/u00.html">10 units</a></p>
+<p class="z">Дж. А. Гарибян<br>«Учим армянский самостоятельно»<br>Москва 2017</p>
+<p class="c" lang="en"><a href="gar/u00.html">12 units</a></p>
 <h2><span lang="en">Readings</span></h2>
-<p class="z"><span lang="hy" class="n">Հարրի Փոթթերը և Գաղտնի սրահը</span></p>
-<p class="c"><a href="poter/u00.html"><span lang="en">18 chapters</span></a></p>
-
-<hr />
-
+<p class="z" lang="hy">«Հարրի Փոթթերը և Գաղտնի սրահը»</p>
+<p class="c"><span lang="en"><a href="poter/u00.html">18 chapters</a></span></p>
+<hr>
 </body></html>
