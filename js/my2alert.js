@@ -31,7 +31,7 @@ $(function () {
             }
         }
     });
-});
+})
 
 /* to next and prev page links and set audio =OGG dir= */
 function arrow() {
@@ -54,7 +54,7 @@ function arrow() {
             scrollTop: $('#my_ogg').offset().top
         }, 600);
     });
-};
+}
 
 /* underline and IPA on/of */
 function toggleShow2() {
@@ -86,7 +86,7 @@ function toggleShow2() {
            styleElement(xxx[i], "text-decoration", "none");
         }
     }
-};
+}
 function toggleShow() {
     var i,
         x = document.querySelectorAll(".zxx"),
@@ -98,71 +98,72 @@ function toggleShow() {
             styleElement(x[i], "display", "none");
         }
     }
-};
+}
 function styleElement(element, prop, val) {
     element.style.setProperty(prop, val);
-};
+}
 
 /* menu */
 $(document).ready(
-function(){
-$("body")
-.on('click', '[href*="#"]', function(e){
-var fixed_offset = $("body > nav.menu")
-.outerHeight(true);
-$('html,body')
-.stop()
-.animate({
-scrollTop: $(this.hash).offset().top - fixed_offset}, 1000);
-e.preventDefault();
-});
-$(function(){
-var curlvl;
-var startlvl = 0;
-var prevlvl = startlvl;
-var lst = $("#toc");
-var tmp2 = $("<p class='r'><a class='inl' href='javascript:void(0)' title='Закрыть меню' onclick='closeNav()'>&thinsp;✖&thinsp;</a></p><p class='c'><a class='inl' href='u00.html' title='all units of book'>&thinsp;⇚&thinsp;</a> <a class='inl' href='#top' title='top of page'>&thinsp;⇑&thinsp;</a> <a class='inl' href='javascript:void(0)' title='pronunciation' onclick=\"toggleShow()\">[ ]</a> <a class='inl' href='javascript:void(0)' title='subject + predicate' onclick=\"toggleShow2()\">&thinsp;≡&thinsp;</a><hr class='h' />");
-lst.append(tmp2);
-var href1 = window.location.href;
-var href2 = href1.replace(window.location.hash, "");
-if (typeof lst !== "undefined"){
-$(".text_read h2, .text_read h3")
-.each(function(i){
-var current = $(this);
-current.attr("id", "title" + i);
-for (curlvl = parseInt(current.prop("tagName")
-.substring(1))-1; curlvl > prevlvl; prevlvl++){
-var tmp = $("<ul></ul>");
-if (prevlvl == startlvl)
-{lst.append(tmp);}
-else{
-var last_li = $("#toc li")
-.last();
-last_li.append(tmp);
-}
-if (curlvl > prevlvl + 1)
-tmp.append("<li></li>");
-lst = tmp;
-}
-while (curlvl < prevlvl){
-lst = lst.parent()
-.parent();
-prevlvl--;
-}
-curder = current.html();
-if (curder.charAt(curder.length - 1) == ':'){
-curder = curder.substr(0, curder.length - 1);
-}
-curder = curder.replace("•","Текст для чтения");
-curder = curder.replace("<br>","@@@").replace("<br />","@@@").replace("<br/>","@@@");
-if (curder.indexOf('@@@')>0){
-curder = curder.substr(0, curder.indexOf('@@@'));
-}
-lst.append("<li><a id='link" + i + "' itemprop='url' href='" + href2 + "#title" + i + "'>" + curder.trim() + "</a></li>");
-});
-}
-});
-});
+    function () {
+        $("body")
+            .on('click', '[href*="#"]', function (e) {
+                var fixed_offset = $("body > nav.menu")
+                    .outerHeight(true);
+                $('html,body')
+                    .stop()
+                    .animate({scrollTop: $(this.hash).offset().top - fixed_offset}, 1000);
+                e.preventDefault();
+            });
+        $(function () {
+            var curlvl,
+                startlvl = 0,
+                prevlvl = startlvl,
+                lst = $("#toc"),
+                tmp2 = $("<p class='r'><a class='inl' href='javascript:void(0)' title='Закрыть меню' onclick='closeNav()'>&thinsp;✖&thinsp;</a></p><p class='c'><a class='inl' href='u00.html' title='all units of book'>&thinsp;⇚&thinsp;</a> <a class='inl' href='#top' title='top of page'>&thinsp;⇑&thinsp;</a> <a class='inl' href='javascript:void(0)' title='pronunciation' onclick=\"toggleShow()\">[ ]</a> <a class='inl' href='javascript:void(0)' title='subject + predicate' onclick=\"toggleShow2()\">&thinsp;≡&thinsp;</a><hr class='h' />"),
+                href1 = window.location.href,
+                href2 = href1.replace(window.location.hash, "");
+            lst.append(tmp2);
+            if (typeof lst !== "undefined") {
+                $(".text_read h2, .text_read h3")
+                    .each(function (i) {
+                        var current = $(this);
+                        current.attr("id", "title" + i);
+                        for (curlvl = parseInt(current.prop("tagName")
+                                .substring(1), 10) - 1; curlvl > prevlvl; prevlvl++) {
+                            var tmp = $("<ul></ul>");
+                            if (prevlvl == startlvl) {
+                                lst.append(tmp);
+                            } else {
+                                var last_li = $("#toc li")
+                                    .last();
+                                last_li.append(tmp);
+                            }
+                            if (curlvl > prevlvl + 1) {
+                                tmp.append("<li></li>");
+                            }
+                            lst = tmp;
+                        }
+                        while (curlvl < prevlvl) {
+                            lst = lst.parent()
+                                .parent();
+                            prevlvl--;
+                        }
+                        curder = current.html();
+                        if (curder.charAt(curder.length - 1) == ':') {
+                            curder = curder.substr(0, curder.length - 1);
+                        }
+                        curder = curder.replace("•", "Текст для чтения");
+                        curder = curder.replace("<br>", "@@@").replace("<br />", "@@@").replace("<br/>", "@@@");
+                        if (curder.indexOf('@@@') > 0) {
+                            curder = curder.substr(0, curder.indexOf('@@@'));
+                        }
+                        lst.append("<li><a id='link" + i + "' itemprop='url' href='" + href2 + "#title" + i + "'>" + curder.trim() + "</a></li>");
+                    });
+            }
+        });
+    }
+);
 
 /* prepare data for small quize */
 Array.prototype.shuffle = function () {
@@ -176,7 +177,7 @@ Array.prototype.shuffle = function () {
         this[j] = t;
     }
     return this;
-};
+}
 
 function unique(a) {
     var obj = {},
