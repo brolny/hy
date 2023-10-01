@@ -16,9 +16,11 @@
 <script src="../js/my2alert.js"></script>
 </head>
 <body class="hyphenate" onLoad="Hyphenator.run()">
+<div class="abs" onclick="openNav()">≡</div>
 <p><a href='https://brolny.github.io/hy/' title='Main page'>Main page</a></p>
 <h1 id="top">Punctuation<br /><span lang="hy" class="n">Կետադրություն</span></h1>
-<hr />
+<nav id="toc" itemscope="itemscope" onclick="closeNav()" class="sidenav" itemtype='https://www.schema.org/SiteNavigationElement'></nav>
+<div class="text_read" onclick="closeNav()">
 <h2>Nowadays</h2>
 <p><a target="_blank" href="https://en.wikipedia.org/wiki/Armenian_alphabet#Punctuation" title="Armenian punctuation">Info from wikipedia.</a></p>
 <h3>Used inside a word</h3>
@@ -86,6 +88,6 @@
 <tr><td><span lang="hy" class="n">ՈՒ Ու ու</span></td><td><span lang="zxx">u</span></td></tr>
 </tbody></table>
 <hr />
-
+</div>
 <script src="../js/tooltip.js"></script>
 </body></html>
