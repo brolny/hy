@@ -513,13 +513,13 @@ div.j {
 }
 
 div.jj {
-  column-gap: 0%;
+  column-gap: 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(max-content, max-content));
 }
 
 div.f {
-  column-gap: 0%;
+  column-gap: 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(max-content, max-content));
 }
