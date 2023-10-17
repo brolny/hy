@@ -27,6 +27,7 @@ $(function () {
             a = a.replace(/ը$/, '');
             a = a.replace(/նն$/, 'ն');
             if (a !== '') {
+                copyToClipboard(a);
                 window.open('https://wiktionary.org/wiki/' + a, '_blank');
             }
         }
@@ -362,3 +363,34 @@ function dddd() {
     document.getElementById("id01").innerHTML = s;
     document.body.scrollIntoView(false);
 }
+
+function copyToClipboard(text) {
+  var textarea = document.createElement("textarea");
+  textarea.value = text;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textarea);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
