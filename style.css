@@ -5,10 +5,10 @@
 }
 @keyframes fadeDown {
   0% {
-    opacity: 0.3;
+    opacity: .3;
   }
   100% {
-    opacity: 0.9;
+    opacity: .9;
   }
 }
 :root {
@@ -44,7 +44,7 @@ body {
   font-family: "Segoe UI Historic", "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: var(--f-s);
   font-stretch: ultra-condensed;
-  font-weight: normal;
+  font-weight: 400;
   hyphens: auto;
   letter-spacing: normal;
   line-height: normal;
@@ -72,7 +72,7 @@ span:lang(la) {
 }
 p:lang(en),
 span:lang(en) {
-  color: #000039;
+  color: Blue;
 }
 p:lang(hy),
 span:lang(hy) {
@@ -90,7 +90,7 @@ span:lang(hy):after {
 }
 .n:after {
   /*content: "";*/
-  content: "" !important;
+  content: ""!important;
 }
 
 .d:before,
@@ -102,7 +102,7 @@ span:lang(hy):after {
 .d:after,
 .i:after,
 .m:after {
-  content: "" !important;
+  content: ""!important;
 }
 
 .m {
@@ -142,7 +142,7 @@ span:lang(zxx):after {
 .zxx {
   color: DarkCyan;
   font-size: var(--f-s);
-  margin-left: -0.6em;
+  margin-left: -.6em;
 }
 /**************************/
 
@@ -160,7 +160,7 @@ h1 {
   background-color: white;
   font-size: var(--f-s-2);
   font-weight: 500;
-  margin: var(--f-s) auto var(--f-s-2) auto;
+  margin: var(--f-s) auto var(--f-s-2);
   padding: var(--f-s-m);
   text-align: center;
   text-indent: 0;
@@ -171,7 +171,7 @@ h2 {
   border-radius: var(--f-s-m);
   font-size: var(--f-s-b);
   font-weight: 500;
-  margin: var(--f-s-2) auto var(--f-s-q) auto;
+  margin: var(--f-s-2) auto var(--f-s-q);
   padding: var(--f-s-m);
   text-align: right;
   text-indent: 0;
@@ -185,7 +185,7 @@ h3 {
   font-size: var(--f-s);
   font-weight: 500;
   letter-spacing: 0;
-  margin: var(--f-s-2) auto var(--f-s-m) auto;
+  margin: var(--f-s-2) auto var(--f-s-m);
   padding: var(--f-s-m);
   text-align: center;
   text-indent: 0;
@@ -199,7 +199,7 @@ h4 {
   font-size: var(--f-s);
   font-weight: 500;
   letter-spacing: 0;
-  margin: var(--f-s-2) auto var(--f-s-m) auto;
+  margin: var(--f-s-2) auto var(--f-s-m);
   padding: var(--f-s-m);
   text-align: center;
   text-indent: 0;
@@ -215,7 +215,7 @@ summary {
   cursor: pointer;
   font-size: var(--f-s);
   font-weight: 500;
-  margin: var(--f-s) auto 0 auto;
+  margin: var(--f-s) auto 0;
   outline: 0;
   padding: var(--f-s-m);
   text-align: center;
@@ -224,7 +224,7 @@ summary {
 details {
   border-radius: var(--f-s-m);
   box-shadow: 0 0 var(--f-s-q) DarkCyan;
-  margin: var(--f-s) auto 0 auto;
+  margin: var(--f-s) auto 0;
 }
 .sh {
   border-radius: var(--f-s-m);
@@ -367,7 +367,7 @@ h4 + p.uu {
 
 p.z:before {
   content: "● ";
-  text-decoration: none !important;
+  text-decoration: none!important;
 }
 p.z:after,
 p.u:after {
@@ -404,9 +404,9 @@ li {
   text-indent: var(--f-s-d);
 }
 li:before {
-  color: DarkSlateGray !important;
+  color: DarkSlateGray!important;
   content: "● ";
-  text-decoration: none !important;
+  text-decoration: none!important;
 }
 /*******************/
 
@@ -419,11 +419,11 @@ li:before {
   cursor: pointer;
   display: table-cell;
   height: 25%;
-  left: var(--f-s) !important;
-  opacity: 0.2;
+  left: var(--f-s)!important;
+  opacity: .2;
   position: fixed;
   text-align: center;
-  top: var(--f-s) !important;
+  top: var(--f-s)!important;
   vertical-align: middle;
 }
 .abs:hover {
@@ -470,7 +470,7 @@ ul.big {
   bottom: var(--f-s);
   box-shadow: 0 0 var(--f-s-m) gray;
   left: var(--f-s);
-  opacity: 0.95;
+  opacity: .95;
   overflow-x: hidden;
   padding-top: 0;
   position: fixed;
@@ -489,12 +489,12 @@ ul.big {
   display: inline;
   font-weight: 300;
   padding: var(--f-s-q) 0;
-  transition: 0.5s;
+  transition: .5s;
 }
 
 .inl {
   border-radius: var(--f-s-m);
-  display: inline !important;
+  display: inline!important;
   font-size: var(--f-s-h);
   padding: 0;
   text-align: center;
