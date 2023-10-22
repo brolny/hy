@@ -158,6 +158,7 @@ dl {
 
 h1 {
   background-color: white;
+  cursor: pointer;
   font-size: var(--f-s-2);
   font-weight: 500;
   margin: var(--f-s) auto var(--f-s-2);
@@ -168,6 +169,7 @@ h1 {
 
 h2 {
   background-color: white;
+  cursor: pointer;
   border-radius: var(--f-s-m);
   font-size: var(--f-s-b);
   font-weight: 500;
@@ -182,6 +184,7 @@ h3 {
   background-color: Gainsboro;
   border-radius: var(--f-s-m);
   box-shadow: 0 0 var(--f-s-q) Gray;
+  cursor: pointer;
   font-size: var(--f-s);
   font-weight: 500;
   letter-spacing: 0;
@@ -196,6 +199,7 @@ h4 {
   background-color: Gainsboro;
   border-radius: var(--f-s-m);
   box-shadow: 0 0 var(--f-s-q) Gray;
+  cursor: pointer;
   font-size: var(--f-s);
   font-weight: 500;
   letter-spacing: 0;
