@@ -121,7 +121,7 @@ $(document).ready(
                 startlvl = 0,
                 prevlvl = startlvl,
                 lst = $("#toc"),
-                tmp2 = $("<p class='r'><a class='inl' href='javascript:void(0)' title='Закрыть меню' onclick='closeNav()'>&thinsp;✖&thinsp;</a></p><p class='c'><a class='inl' href='u00.html' title='all units of book'>&thinsp;⇚&thinsp;</a> <a class='inl' href='#top' title='top of page'>&thinsp;⇑&thinsp;</a> <a class='inl' href='javascript:void(0)' title='pronunciation' onclick=\"toggleShow()\">[ ]</a> <a class='inl' href='javascript:void(0)' title='subject + predicate' onclick=\"toggleShow2()\">&thinsp;≡&thinsp;</a><hr class='h' />"),
+                tmp2 = $("<p class='r'><a class='inl' title='Закрыть меню' onclick='closeNav()'>&thinsp;✖&thinsp;</a></p><p class='c'><a class='inl' href='u00.html' title='all units of book'>&thinsp;⇚&thinsp;</a> <a class='inl' href='#top' title='top of page'>&thinsp;⇑&thinsp;</a> <a class='inl' title='pronunciation' onclick=\"toggleShow()\">[ ]</a> <a class='inl' title='subject + predicate' onclick=\"toggleShow2()\">&thinsp;≡&thinsp;</a><hr class='h' />"),
                 href1 = window.location.href,
                 href2 = href1.replace(window.location.hash, "");
             lst.append(tmp2);
