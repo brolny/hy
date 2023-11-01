@@ -497,12 +497,18 @@ ul.big {
 }
 
 .inl {
-  border-radius: var(--f-s-m);
-  display: inline!important;
+
+  cursor: pointer;
+
   font-size: var(--f-s-h);
   padding: 0;
   text-align: center;
   text-indent: 0;
+}
+
+a:before,
+a:after {
+  content: " ";
 }
 .sidenav a:hover {
   background: DarkCyan;
