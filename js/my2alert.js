@@ -57,6 +57,18 @@ function arrow() {
     });
 }
 
+/* go to top of page  */
+function goTop() {
+    $('html, body').animate({
+         scrollTop: $('#top').offset().top
+        }, 600);
+}
+
+/* go to list of units */
+function goList() {
+    window.open('u00.html', '_self');
+}
+
 /* underline and IPA on/of */
 function toggleShow2() {
     var i,
@@ -121,7 +133,7 @@ $(document).ready(
                 startlvl = 0,
                 prevlvl = startlvl,
                 lst = $("#toc"),
-                tmp2 = $("<p class='r'><a class='inl' title='Закрыть меню' onclick='closeNav()'>&thinsp;✖&thinsp;</a></p><p class='c'><a class='inl' href='u00.html' title='all units of book'>&thinsp;⇚&thinsp;</a> <a class='inl' href='#top' title='top of page'>&thinsp;⇑&thinsp;</a> <a class='inl' title='pronunciation' onclick=\"toggleShow()\">[ ]</a> <a class='inl' title='subject + predicate' onclick=\"toggleShow2()\">&thinsp;≡&thinsp;</a><hr class='h' />"),
+                tmp2 = $("<p class='r'><span class='inl' title='Закрыть меню' onclick='closeNav()'>&emsp;✖&emsp;</span></p><p class='inl'><span onclick='goList()' title='all units of book'>&emsp;⇚&emsp;</span> <span onclick='goTop()' title='top of page'>&emsp;⇑&emsp;</span> <span title='pronunciation' onclick='toggleShow()'>[ ]</span> <span title='subject + predicate' onclick='toggleShow2()'>&emsp;≡&emsp;</span><hr class='h' />"),
                 href1 = window.location.href,
                 href2 = href1.replace(window.location.hash, "");
             lst.append(tmp2);
@@ -372,25 +384,3 @@ function copyToClipboard(text) {
   document.execCommand("copy");
   document.body.removeChild(textarea);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
