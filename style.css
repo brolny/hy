@@ -497,9 +497,7 @@ ul.big {
 }
 
 .inl {
-
   cursor: pointer;
-
   font-size: var(--f-s-h);
   padding: 0;
   text-align: center;
