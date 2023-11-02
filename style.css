@@ -132,11 +132,11 @@ span:lang(zxx) {
 }
 p:lang(zxx):before,
 span:lang(zxx):before {
-  content: "［";
+  content: "[";
 }
 p:lang(zxx):after,
 span:lang(zxx):after {
-  content: "］";
+  content: "]";
 }
 
 .zxx {
