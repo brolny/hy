@@ -291,7 +291,7 @@ function tt() {
         for (j = 0; j < bbb.length; j++) {
             ss += bbb[j];
         }
-        s += "<div class='sh' id='" + u[i][1] + "'><p><span lang='hy'>" + u[i][0].split('*').join('') + "<\/span><span class='zxx' lang='zxx'>" + u[i][2] + "</span><\/p><p class='bu'>" + ss + "<\/p><\/div>";
+        s += "<div class='sh' id='" + u[i][1] + "'><p><span lang='hy' class='n'>" + u[i][0].split('*').join('') + "<\/span>&emsp;&emsp;<span class='zxx' lang='zxx'>" + u[i][2] + "</span><\/p><p class='bu'>" + ss + "<\/p><\/div>";
     }
     document.getElementById("id01").innerHTML = s;
     document.body.scrollIntoView(false);
