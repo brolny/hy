@@ -40,15 +40,28 @@ body {
   -ms-hyphens: auto;
   -ms-word-break: break-all;
   -webkit-font-smoothing: antialiased;
+  -webkit-hyphenate-limit-after: 2;
+  -webkit-hyphenate-limit-before: 2;
+  -webkit-hyphenate-limit-chars: 5 2 2;
+  -webkit-hyphenate-limit-last: always;
+  -webkit-hyphenate-limit-lines: 5;
+  -webkit-hyphenate-limit-zone: 1%;
   -webkit-hyphens: auto;
   background-color: white;
-  font-family: "Segoe UI Historic", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "Noto Sans Armenian", "Noto Sans", Helvetica, Arial, sans-serif;
   font-size: var(--f-s);
   font-stretch: ultra-condensed;
   font-weight: 400;
+  hyphenate-character: '֊';
+  hyphenate-limit-after: 2;
+  hyphenate-limit-before: 2;
+  hyphenate-limit-chars:  5 2 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-lines: 5;
+  hyphenate-limit-zone: 1%;
   hyphens: auto;
   letter-spacing: normal;
-  line-height: normal;
+  line-height: 150%;
   margin: auto;
   overflow-wrap: break-word;
   padding: var(--f-s);
@@ -75,7 +88,7 @@ span:lang(la) {
 }
 p:lang(en),
 span:lang(en) {
-  color: black;
+  color: Blue;
 }
 p:lang(hy),
 span:lang(hy) {
@@ -168,6 +181,7 @@ h1 {
   padding: var(--f-s-m);
   text-align: center;
   text-indent: 0;
+  line-height: normal;
 }
 
 h2 {
@@ -181,6 +195,7 @@ h2 {
   text-align: right;
   text-indent: 0;
   text-transform: capitalize;
+  line-height: normal;
 }
 
 h3 {
@@ -196,6 +211,7 @@ h3 {
   text-align: center;
   text-indent: 0;
   width: 80%;
+  line-height: normal;
 }
 
 h4 {
@@ -211,6 +227,7 @@ h4 {
   text-align: center;
   text-indent: 0;
   width: 60%;
+  line-height: normal;
 }
 
 /*det summ**/
