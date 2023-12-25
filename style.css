@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+Armenian&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
+
 @media screen and (min-width: 500px) {
   body {
     width: 500px;
@@ -67,6 +70,7 @@ body {
   padding: var(--f-s);
   text-indent: var(--f-s-m);
   text-rendering: optimizeLegibility;
+  text-wrap: pretty;
   word-wrap: break-word;
 }
 
@@ -88,7 +92,7 @@ span:lang(la) {
 }
 p:lang(en),
 span:lang(en) {
-  color: black;
+  color: Blue;
 }
 p:lang(hy),
 span:lang(hy) {
